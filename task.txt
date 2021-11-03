@@ -1,0 +1,4 @@
+Create program both in C++, and Python by making use of described or other functions. 
+Requirements are the same as for the previous task, see published detailed requirements.
+
+B7. Given natural number n<10. Find all rational numbers in range [0,1] for which denominator doesn't exceed n.
