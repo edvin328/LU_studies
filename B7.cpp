@@ -41,9 +41,9 @@ int main ()
         k = check();
         // print the result
         cout << "Rational numbers in range [0,1]:" <<endl;
-        cout << 1;
+        cout << 1 << endl;
         rational(k);
-        cout << 0;
+        cout << 0 << endl;
         //choose to continue or exit program
         cout << "Press 'y' if you want to continue, any other letter for exit: ";
         cin  >> repeat;
