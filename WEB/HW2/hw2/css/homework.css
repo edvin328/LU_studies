@@ -1,0 +1,428 @@
+/*Info about the author
+name: Edvins Skrebelis
+student ID number: es12220
+*/
+
+/* Base font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;1,700&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    min-width:1500px;
+}
+
+/* Helper classes */
+.text-center {
+    text-align: center;
+}
+.right {
+    float: right !important;
+}
+.left {
+    float: left !important;
+}
+.upper {
+    text-transform: uppercase;
+}
+.line {
+    background: white;
+    width: 30px;
+    height: 2px;
+    display: block;
+    margin: 0 auto 10px;
+    position: relative;
+    top: 5vh;
+}
+
+
+/* Top Menu section */
+.menu {
+    position: fixed;
+    width: 100%;
+    font-size: 1.2em;
+    z-index: 300;
+}
+.menu .upper-menu {
+    float: left;
+}
+.menu .upper-menu.right {
+    background: rgb(242 213 26 / 80%);
+    border-radius: 35px;
+    padding: 5px 10px;
+    margin: 20px 25px 18px 20px;
+    border: 1px solid white;
+}
+.menu .active {
+  color: rgb(242, 177, 26);
+}
+.menu ul {
+  padding: 0;
+  list-style: none;
+  width: 100%;
+  text-align: center;
+  height: 70px;
+  background: rgb(14 2 35 / 80%);
+}
+
+.menu ul li {
+  display: inline-block;
+  cursor: pointer;
+  float: left;
+  margin: 0;
+  color: #FFFFFF;
+  text-align: center;
+  padding: 25px 20px;
+}
+
+.menu ul li a {
+  display: block;
+  color: white;
+  text-decoration: none;
+}
+.menu ul li ul.dropdown li {
+    display: inline;
+    float: left;
+    background: #FFFFFF;
+  }
+  .menu .expand {
+      display: none;
+  }
+
+.menu ul li ul.sub-menu {
+  width: 100%;
+  display: none;
+  position: absolute;
+  z-index: 200;
+  left: 0;
+}
+
+
+
+/* hover */
+.menu .upper-menu.right a:hover {
+    color: white;
+}
+.menu .upper-menu.right:hover {
+    background: rgb(242 213 26)
+}
+.menu ul li a:hover {
+  color: rgb(242, 177, 26);
+}
+
+.menu ul li:hover ul.sub-menu {
+    display: inline;
+    left: 1vh;
+    width: auto;
+    margin: 0;
+    padding: 0;
+    height: auto;
+    font-size: 0.9em;
+    top: 70px;
+}
+ .menu ul li:hover ul.sub-menu li {
+    float: left;
+    clear: left;
+    padding: 10px;
+ }
+ .menu .sub-menu-caption .collapse,
+ .menu .sub-menu-caption .expand {
+    float: right;
+}
+.menu .sub-menu-caption:hover .collapse {
+    display: none;
+    float: right;
+}
+.menu .sub-menu-caption:hover .expand {
+    display: block;
+    float: right;
+}
+
+/* Header section */
+.header {
+    height: 100vh;
+    background-image: url('../images/topimage.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+.bg-overlay{
+    height: 100%;
+    background: rgb(14 2 35 / 50%)
+}
+.header .title {
+    position: absolute;
+    right: 5vh;
+    bottom: 7vh;
+}
+.header .title h1 {
+    font-size: 72px;
+    color: white;
+}
+.header .meta {
+    position: absolute;
+    right: 5vh;
+    bottom: 1vh;
+    font-size: 0.8em;
+    color: white;
+}
+.header .meta ul li {
+    float: left;
+    padding: 15px 15px 15px 0px;
+    margin-left: 20px;
+    width: auto;
+    border-radius: 35px;
+    border: 1px solid white;
+}
+.header .meta ul li span {
+    background: rgb(242 213 26 / 80%);
+    border-radius: 35px;
+    padding: 15px 10px;
+    margin-right: 10px;
+}
+.header .social {
+    position: absolute;
+    right: 5vh;
+    top: 8vh;
+}
+.header .social h5 {
+    float: left;
+    font-size: 18px;
+    opacity: 0.8;
+    padding: 5px 15px 5px 5px;
+    color: white;
+}
+.header .social img {
+    width: 25px;
+    opacity: 0.6;
+    height: auto;
+}
+.header .social img:hover {
+    opacity: 1;
+}
+.header .social .social-btns {
+    float: right;
+}
+
+/* Summary section */
+.section-summary {
+    height: 30vh;
+}
+.section-summary h2 {
+    text-align: center;
+    font-size: 42px;
+    font-weight: bold;
+    color: black;
+    margin-top: 35px;
+}
+.section-summary p {
+    color: rgb(132 132 132);
+    margin: 2em 10em 0em;
+    line-height: 1.8em;
+}
+.section-summary p.add {
+    margin: 0 10em 0;
+}
+.section-summary p.add span{
+    font-style: oblique;
+}
+
+/* Section Cast */
+.section-cast {
+    height: 100vh;
+    min-height: 680px;
+    background-image: url('../images/car.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+.section-cast .bg-overlay{
+    background: rgb(14 2 35 / 80%);
+}
+.section-cast h4 {
+    font-size: 24px;
+    color: white;
+    padding-top: 5vh;
+    font-weight: bold;
+    padding-bottom: 15vh;
+}
+
+.section-cast ul {
+  display: flex;
+  position: relative;
+  width: auto;
+  margin: 0 10vh;
+}
+.section-cast ul li {
+  flex: 1 1 18%;
+  height: auto;
+  padding: 20px 15px;
+  width: auto;
+}
+.section-cast ul li a {
+    position: relative;
+    display: block;
+}
+.section-cast ul li a img {
+    height: 50vh;
+}
+.section-cast ul li a .cast-head {
+    position: absolute;
+    top: 1vh;
+    left: 1vh;
+    padding: 5px 10px;
+    color: rgb(255 255 255 / 80%);
+    background: rgb(242 213 26 / 80%);
+    opacity: 0.8;
+}
+.section-cast ul li a .cast-text {
+    position: absolute;
+    bottom: 0;
+    height: 70px;
+    width: 28vh;
+    background: rgb(255 255 255 / 80%);
+    color: rgb(42 42 42 / 80%);
+    font-size: 18px;
+    text-align: center;
+    text-transform: uppercase;
+}
+.section-cast ul li a .cast-text h5 {
+    font-weight: bold;
+    margin-top: 1vh;
+    margin-bottom: 0.5vh;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+
+/* hover */
+.section-cast ul li a:hover .cast-text {
+    background: rgb(242 213 26 / 100%);
+    color: rgb(42 42 42 / 100%);
+}
+.section-cast ul li a:hover .cast-head {
+    color: rgb(255 255 255 / 100%);
+    background: rgb(242 213 26 / 100%);
+}
+.section-cast ul li a:hover .cast-text h5 {
+    color: white;
+}
+
+/* Trailer section*/
+.section-trailer{
+    height: 100vh;
+    min-height: 950px;
+}
+.section-trailer h2 {
+    font-size: 42px;
+    font-weight: bold;
+    color: black;
+    font-weight: bold;
+    margin-top: 35px;
+}
+.section-trailer ul {
+    margin: 5vh 35vh 0vh;
+}
+
+.section-trailer ul li:first-child{
+    width: 80%;
+    float: left;
+}
+.section-trailer ul li:last-child{
+    position: relative;
+    width: 20%;
+    height: 750px;
+    float: right;
+    top: 0;
+}
+.section-trailer ul li:last-child li{
+    margin-bottom: 2vh;
+}
+.section-trailer iframe {
+    width: 100%;
+    height: 750px;
+}
+.section-trailer ul li ul {
+    margin: 0;
+    height: 100%;
+}
+.section-trailer ul li ul li{
+    width: auto !important;
+    float: unset !important;
+    width: 100% !important;
+    height: auto !important;
+}
+.section-trailer li:last-child a{
+    color: black;
+    text-decoration: none;
+}
+.section-trailer ul li ul li:last-child {
+    bottom: 0;
+    position: absolute;
+    top: inherit;
+    margin: 0;
+}
+
+
+/* Get Tickets section */
+.section-tickets {
+    height: 35vh;
+    background-image: url('../images/cinema.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+.section-tickets .bg-overlay{
+    background: rgb(14 2 35 / 50%);
+}
+.section-tickets h4 {
+    font-size: 24px;
+    color: white;
+    font-weight: bold;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+}
+.section-tickets .btn.btn-l {
+    background: rgb(242 213 26 / 80%);
+    border-radius: 35px;
+    padding: 10px 20px;
+    border: 1px solid white;
+    text-decoration: none;
+    color: white;
+}
+
+
+
+/* hover */
+.section-tickets .btn.btn-l:hover {
+    background: rgb(242 213 26 / 100%);
+}
+
+
+/* Footer section */
+.section-footer {
+    text-align: center;
+    margin: 2vh 0 5vh;
+}
+.section-footer li {
+    display: inline-block;
+    cursor: pointer;
+    margin: 0;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 5px 20px;
+    border-right: 1px solid rgb(181 181 181);
+}
+.section-footer li a {
+    color: rgb(136 136 136);
+    text-decoration: none;
+}
+.section-footer li:last-child {
+    border-right: none;
+}
+
+/* hover state */
+.section-footer li a:hover {
+    color: rgb(14 2 35);
+}
+
